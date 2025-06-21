@@ -1,5 +1,6 @@
 #include "../matriz/matriz.h"
 #include "../gauss/gauss.h"
+#include "../gauss_pivoteamento/gauss_pivoteamento.h"
 
 using namespace std;
 
@@ -13,8 +14,9 @@ int main() {
     Vector sol_gauss = gaussElimination(A, b);
     printVector(sol_gauss, "a) Solucao Gauss sem pivoteamento:");
 
-    Vector sol_gauss_piv = gaussEliminationPivoting(A, b);
-    printVector(sol_gauss_piv, "b) Solucao Gauss com pivoteamento:");
+    Vector sol_gauss_pivo = gaussEliminationPivo(A, b);
+    printVector(sol_gauss_pivo, "b) Solucao Gauss com pivoteamento:");
+
     cout << endl;
     
     return 0;

@@ -1,10 +1,11 @@
-#include "gauss.h"
+#include "gauss_pivoteamento.h"
 #include <cmath>
 #include <algorithm>
+#include "../pivoteamento/pivoteamento.h"
 
 using namespace std;
 
-Vector gaussElimination(Matriz U, Vector b) {
+Vector gaussEliminationPivo(Matriz U, Vector b) {
     int n = U.size();
     Matriz l(n, Vector(n, 0.0));
 
@@ -13,6 +14,8 @@ Vector gaussElimination(Matriz U, Vector b) {
     }
 
     for(int i=0; i<n; i++){
+        pivoteamento(U, b, i);
+
         for(int j=i+1; j<n; j++){
             l[j][i] = -(U[j][i]/U[i][i]);
 
