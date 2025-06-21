@@ -23,10 +23,6 @@ Vector gaussElimination(Matriz U, Vector b) {
         }
     }
 
-    printMatriz(l, "Matriz de multiplicadores:");
-    printMatriz(U, "Matriz A após eliminição de Gauss:");
-    printVector(b, "Vetor B após eliminação de Gauss:");
-
     Vector x(n, 0.0);
 
     for(int i=n-1; i>=0; i--){

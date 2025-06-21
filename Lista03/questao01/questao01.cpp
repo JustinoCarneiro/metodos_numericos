@@ -5,10 +5,7 @@
 using namespace std;
 
 int main() {
-    // Matriz modificada para forçar o pivoteamento na primeira etapa (k=0)
-    // A linha com o '20' (maior elemento da coluna 0) foi movida para baixo.
     Matriz A = {{7, 30, 8}, {20, 7, 9}, {9, 8, 30}};
-    // O vetor 'b' também deve ser alterado para corresponder às novas posições das equações.
     Vector b = {38, 16, 38};
 
     cout << "====== QUESTAO 1: ELIMINACAO DE GAUSS ======" << endl;
